@@ -1,12 +1,12 @@
 import express from 'express';
 import path from 'node:path';
-import { GetRoom } from './Routes/get_room.js';
-import { GetMyRoom } from './Routes/get_my_rooms.js';
-import { GetIp } from './Routes/get_ip.js';
-import { CreateRoom } from './Routes/create_room.js';
-import { Chat } from './Routes/chat.js';
-import { AddParticipants } from './Routes/add_participants.js';
-import { RemoveParticipants } from './Routes/remove_participants.js';
+import { GetRoom } from '../src/Routes/get_room.js';
+import { GetMyRoom } from '../src/Routes/get_my_rooms.js';
+import { GetIp } from '../src/Routes/get_ip.js';
+import { CreateRoom } from '../src/Routes/create_room.js';
+import { Chat } from '../src/Routes/chat.js';
+import { AddParticipants } from '../src/Routes/add_participants.js';
+import { RemoveParticipants } from '../src/Routes/remove_participants.js';
 const app = express();
 app.use(express.json());
 // home
@@ -21,7 +21,4 @@ app.post("/create-room", CreateRoom);
 app.post("/chat/:roomId/:ip", Chat);
 app.post("/add-participants/:roomId/:participant", AddParticipants);
 app.post("/remove-participants/:roomId/:participant", RemoveParticipants);
-app.listen(3000, () => {
-    console.log("Server started");
-});
 export default app;
