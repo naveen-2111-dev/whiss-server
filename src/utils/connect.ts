@@ -5,7 +5,7 @@ configDotenv();
 
 const URI = process.env.MONGODB;
 
-const client = new MongoClient(URI, {
+const client = new MongoClient(URI!, {
     serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
