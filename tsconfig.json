@@ -3,7 +3,7 @@
     "target": "ESNext",
     "module": "NodeNext",
     "skipLibCheck": true,
-    "outDir": "./dist",
+    "outDir": "dist",
   },
   "exclude": [
     "node_modules"
